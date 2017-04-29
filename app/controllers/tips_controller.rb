@@ -1,6 +1,13 @@
 class TipsController < ApplicationController
   def index
-    @tips = Tip.all
+    if params[:q].present?
+      tip = Tip.where(
+        "tips.title ILIKE ?" , "%#{params[:q]}%"
+      ).first
+      render json: tip
+    else
+      @tips = Tip.all
+    end
   end
 
   def show
