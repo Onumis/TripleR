@@ -1,2 +1,10 @@
 <%= image_tag @contribution.image.url(:medium) %>
 <%= render 'form', contribution: @contribution %>
+
+<% unless current_user %>
+  <% if Rails.env.production? %>
+    <%= link_to 'Entre com o facebook para guardar esta foto', signin_path %>
+  <% else %>
+    <%= link_to 'Entre com o facebook para guardar esta foto', '/auth/developer' %>
+  <% end %>
+<% end %>
