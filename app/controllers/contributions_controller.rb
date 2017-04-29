@@ -37,6 +37,6 @@ class ContributionsController < ApplicationController
 
   def contribution_params
     params.require(:contribution).
-           permit(:image_url, :container)
+           permit(:image, :container)
   end
 end
