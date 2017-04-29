@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :tips, only: [:index, :show]
+  resources :contributions, only: [:index, :show, :create, :destroy]
+
+  root to: 'pages#home'
 end
