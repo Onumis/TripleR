@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get '/signout' => 'sessions#destroy', as: :signout
 
   root to: 'pages#home'
+
 end

@@ -1,5 +1,7 @@
 class User < ApplicationRecord
 
+  has_many :contributions
+
   validates :provider, :uid, presence: true
 
   def self.create_with_omniauth(auth)
