@@ -1,2 +1,5 @@
-<h1>Tips#show</h1>
-<p>Find me in app/views/tips/show.html.erb</p>
+<div>
+  <strong><%= @tip.title %></strong>
+  <%= image_tag @tip.image_url %>
+  <p><%= @tip.body %></p>
+</div>

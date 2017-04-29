@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div>
+  <strong><%= tip_of_the_day.title %></strong>
+  <%= image_tag tip_of_the_day.image_url %>
+  <p><%= tip_of_the_day.body %></p>
+</div>

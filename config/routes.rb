@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :tips, only: [:index, :show]
-  resources :contributions, only: [:index, :show, :create, :destroy]
+  resources :contributions, only: [:index, :show, :create, :update, :destroy]
 
   match '/auth/:provider/callback', to: "sessions#create", via: [:get, :post]
   get '/auth/failure' => 'sessions#failure'
