@@ -27,6 +27,7 @@ section.recycle{
   cursor: pointer;
   box-shadow: 0 0 15px black;
   border-radius: 15px;
+  text-transform: capitalize;
 }
 
 .papel{
@@ -84,5 +85,21 @@ section.dailyTips{
 }
 //end of the 'tip of the day' css
 
+button[name="btnCamera"]{
+  background-image: url("photo-camera.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  text-decoration: none;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 0 15px black;
+  background-color: #2d670f;
+  border-radius: 50%;
+  border: 0;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+}
 
 // end of the home page css
