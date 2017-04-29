@@ -9,10 +9,14 @@ class ContributionsController < ApplicationController
     @contribution = current_user.contributions.find(params[:id])
   end
 
+  def edit
+    @contribution = current_user.contributions.find(params[:id])
+  end
+
   def create
-    contribution = current_user.contributions.build(contribution_params)
-    if contribution.save
-      redirect_to :root_path
+    @contribution = current_user.contributions.build(contribution_params)
+    if @contribution.save
+      render :edit
     else
       # ...
     end
@@ -21,6 +25,7 @@ class ContributionsController < ApplicationController
   def update
     @contribution = current_user.contributions.find(params[:id])
     @contribution.update(contribution_params)
+    redirect_to root_path
   end
 
   def destroy
@@ -32,6 +37,6 @@ class ContributionsController < ApplicationController
 
   def contribution_params
     params.require(:contribution).
-           permit(:image_url, :container)
+           permit(:image, :container)
   end
 end

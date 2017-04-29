@@ -1,0 +1,12 @@
+<%= form_for(contribution) do |f| %>
+  <div class="field">
+    <%= f.radio_button :container, :papel %> papel
+    <%= f.radio_button :container, :plastico %> plastico
+    <%= f.radio_button :container, :vidro %> vidro
+    <%= f.radio_button :container, :metal %> metal
+    <%= f.radio_button :container, :organico %> organico
+  </div>
+  <div class="actions">
+    <%= f.submit 'ok' %>
+  </div>
+<% end %>
