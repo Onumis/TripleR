@@ -10,3 +10,17 @@
 </section>
 
 <button type="button" name="btnCamera"></button>
+
+<hr>
+
+<% if current_user %>
+  <%= form_for(current_user.contributions.new, multipart: true) do |f| %>
+    <div class="field">
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Upload' %>
+    </div>
+  <% end %>
+<% end %>

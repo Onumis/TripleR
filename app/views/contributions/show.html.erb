@@ -1,2 +1,3 @@
-<h1>Contributions#show</h1>
-<p>Find me in app/views/contributions/show.html.erb</p>
+<%= image_tag @contribution.image.url(:medium) %>
+<strong><%= @contribution.container %></strong>
+<p><%= @contribution.processing_results %></p>
