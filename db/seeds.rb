@@ -27,3 +27,32 @@ Tip.find_or_create_by(title: 'Cascas de laranja e limão') do |tip|
   tip.image_url = 'http://queimarbarriga.com.br/wp-content/uploads/2016/02/02_vitamina-casca-1.jpg'
   tip.body = 'Ajudam a manter o açúcar mascavo mais suave, evitando assim a formação de “pedras” de açúcar.'
 end
+
+
+Tip.find_or_create_by(title: 'Reciclagem de papel') do |tip|
+  tip.image_url = 'http://4.bp.blogspot.com/-D1Vr-Whymbw/T4yGTzmvnNI/AAAAAAAAAFo/eVBwKLJSvlg/s1600/papel.jpg'
+  tip.body = 'Reciclagem de papel'
+end
+
+
+Tip.find_or_create_by(title: 'Reciclagem de vidro') do |tip|
+  tip.image_url = 'http://www.setorvidreiro.com.br/arquivo/thumb/artigos/2ef00072f2275b9d7d95_770x440_0_0.jpg'
+  tip.body = 'Reciclagem de vidro'
+end
+
+
+Tip.find_or_create_by(title: 'Reciclagem de plastico') do |tip|
+  tip.image_url = 'http://www.aspr.org.br/siteasp/wp-content/uploads/2016/06/plastico.jpg'
+  tip.body = 'Reciclagem de plástico'
+end
+
+
+Tip.find_or_create_by(title: 'Reciclagem de metal') do |tip|
+  tip.image_url = 'http://www.aspr.org.br/siteasp/wp-content/uploads/2016/06/metal.jpg'
+  tip.body = 'Reciclagem de metal'
+end
+
+Tip.find_or_create_by(title: 'Reciclagem de organicos') do |tip|
+  tip.image_url = 'http://4.bp.blogspot.com/-D1Vr-Whymbw/T4yGTzmvnNI/AAAAAAAAAFo/eVBwKLJSvlg/s1600/papel.jpg'
+  tip.body = 'Reciclagem de organicos'
+end

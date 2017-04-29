@@ -6,11 +6,13 @@ $(function() {
 
   radios.on('click', function() {
     $.get("/tips", {q: this.value}, function(data) {
-      $('.dailyTips').html(
-        "<h2> <a href=/tips/" + data.id + ">"+ data.title + "</a></h2>" +
-        "<a href=/tips/" + data.id + "><img src='"+ data.image_url + "'></a>" +
-        "<p>"+ data.body + "</p>"
-      );
+      if(data) {
+        $('.dailyTips').html(
+          "<h2> <a href=/tips/" + data.id + ">"+ data.title + "</a></h2>" +
+          "<a href=/tips/" + data.id + "><img src='"+ data.image_url + "'></a>" +
+          "<p>"+ data.body + "</p>"
+        );
+      }
     });
   })
 });

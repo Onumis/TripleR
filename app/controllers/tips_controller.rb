@@ -2,7 +2,8 @@ class TipsController < ApplicationController
   def index
     if params[:q].present?
       tip = Tip.where(
-        "tips.title ILIKE ?" , "%#{params[:q]}%"
+        "tips.title ILIKE ? OR tips.body ILIKE ?" ,
+        "%#{params[:q]}%", "%#{params[:q]}%"
       ).first
       render json: tip
     else
