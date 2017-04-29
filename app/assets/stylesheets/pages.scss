@@ -25,6 +25,8 @@ section.recycle{
   flex-basis: 15%;
   text-align: center;
   cursor: pointer;
+  box-shadow: 0 0 15px black;
+  border-radius: 15px;
 }
 
 .papel{
@@ -45,6 +47,17 @@ section.recycle{
 
 .organico{
   background-color: #984508;
+}
+
+@media (max-width: 500px){
+  section.recycle{
+    flex-wrap: wrap;
+  }
+
+  .recycle .recycleBin{
+    flex-basis: 30%;
+    margin-top: 30px;
+  }
 }
 // end of the recycle bin section css
 
