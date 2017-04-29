@@ -1,5 +1,5 @@
 class ContributionsController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!, only: [:index, :show, :destroy]
 
   def index
     @contributions = current_user.contributions
@@ -10,20 +10,21 @@ class ContributionsController < ApplicationController
   end
 
   def edit
-    @contribution = current_user.contributions.find(params[:id])
+    @contribution = Contribution.find(params[:id])
   end
 
   def create
-    @contribution = current_user.contributions.build(contribution_params)
+    @contribution = Contribution.new(contribution_params)
     if @contribution.save
-      render :edit
-    else
-      # ...
+      redirect_to edit_contribution_path(@contribution)
     end
   end
 
   def update
-    @contribution = current_user.contributions.find(params[:id])
+    @contribution = Contribution.find(params[:id])
+    if current_user
+      @contribution.user = current_user
+    end
     @contribution.update(contribution_params)
     redirect_to root_path
   end

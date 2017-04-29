@@ -12,7 +12,8 @@ class SessionsController < ApplicationController
     ) || User.create_with_omniauth(auth_hash)
     reset_session
     session[:user_id] = user.id
-    redirect_to root_path
+
+    redirect_to request.env['omniauth.origin'] || root_path
   end
 
   def destroy
