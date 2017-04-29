@@ -113,7 +113,15 @@ section.dailyTips{
 }
 //end of the 'tip of the day' css
 
-button[name="btnCamera"]{
+.new_contribution label{
+  display: none;
+}
+
+.new_contribution .actions [value="Upload"]{
+  display: none;
+}
+
+.btnCamera{
   background-image: image-url("photo-camera.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -128,6 +136,7 @@ button[name="btnCamera"]{
   position: fixed;
   bottom: 5%;
   right: 5%;
+  font-size: 0;
 }
 //end of the camera button css
 
