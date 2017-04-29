@@ -13,6 +13,8 @@ h1{
   font-size: 1.2em;
 }
 
+//end of the main css for the home page
+
 section.recycle{
   display: flex;
   justify-content: space-around;
@@ -44,6 +46,30 @@ section.recycle{
 .organico{
   background-color: #984508;
 }
+// end of the recycle bin section css
+
+section.dailyTips{
+  margin-top: 50px;
+}
+
+.dailyTips h2{
+  font-size: 1.4em;
+  font-weight: normal;
+  text-align: center;
+}
+
+.dailyTips img{
+  max-width: 80%;
+  margin: 0 10%;
+}
+
+.dailyTips p{
+  font-size: 1em;
+  margin-top: 30px;
+  padding: 0 5%;
+  text-align: justify;
+}
+//end of the 'tip of the day' css
 
 
-// fim do css da home
+// end of the home page css
