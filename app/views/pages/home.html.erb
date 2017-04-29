@@ -4,8 +4,8 @@
 <%= render "shared/recycleBins" %>
 
 <section class="dailyTips">
-  <h2><%= tip_of_the_day.title %></h2>
-  <%= image_tag tip_of_the_day.image_url %>
+  <h2><a href="<%= tips_path %>"><%= tip_of_the_day.title %></a></h2>
+  <a href="<%= tips_path %>"><%= image_tag tip_of_the_day.image_url %></a>
   <p><%= tip_of_the_day.body %></p>
 </section>
 

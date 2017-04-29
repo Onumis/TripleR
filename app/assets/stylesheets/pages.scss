@@ -1,6 +1,11 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a, a:visited, a:checked, a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+
 h1{
   text-align: center;
   font-size: 2em;
@@ -28,6 +33,12 @@ section.recycle{
   box-shadow: 0 0 15px black;
   border-radius: 15px;
   text-transform: capitalize;
+  padding: 1% 0;
+  position: relative;
+}
+
+.recycleBin a{
+  padding: 10% 30%;
 }
 
 .papel{
@@ -50,6 +61,19 @@ section.recycle{
   background-color: #984508;
 }
 
+.thumbsUp{
+  background-image: image-url("like.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -65%;
+  left: 40%;
+  display: none;
+}
+
 @media (max-width: 500px){
   section.recycle{
     flex-wrap: wrap;
@@ -58,6 +82,10 @@ section.recycle{
   .recycle .recycleBin{
     flex-basis: 30%;
     margin-top: 30px;
+  }
+
+  .recycleBin:nth-of-type(n+4) .thumbsUp{
+    top: 120%;
   }
 }
 // end of the recycle bin section css
@@ -86,7 +114,7 @@ section.dailyTips{
 //end of the 'tip of the day' css
 
 button[name="btnCamera"]{
-  background-image: url("photo-camera.png");
+  background-image: image-url("photo-camera.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 60%;
@@ -98,8 +126,9 @@ button[name="btnCamera"]{
   border-radius: 50%;
   border: 0;
   position: fixed;
-  bottom: 10%;
-  right: 10%;
+  bottom: 5%;
+  right: 5%;
 }
+//end of the camera button css
 
 // end of the home page css
